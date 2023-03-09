@@ -11,15 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('posts_categories', function (Blueprint $table) {
-            $table->id();
+        Schema::create('category_post', function (Blueprint $table) {
             $table->unsignedBigInteger('post_id')->index();
             $table->unsignedBigInteger('category_id')->index();
             $table->unique([
                 'post_id',
                 'category_id'
             ]);
-            $table->timestamps();
         });
     }
 

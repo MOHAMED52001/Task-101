@@ -13,10 +13,14 @@ class PostCarousel extends Model
 
     protected $fillable = [
         'post_id',
-        'is-ad',
+        'is_ad',
         'content',
         'see_more',
-        'media',
+        'img',
+        'video',
+        'pub_num',
+        'slot_num',
+        'ad_script',
     ];
 
     public function post()

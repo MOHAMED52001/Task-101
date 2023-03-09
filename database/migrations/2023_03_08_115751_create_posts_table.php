@@ -13,7 +13,6 @@ return new class extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('category_id')->index();
             $table->string('title');
             $table->text('content');
             $table->string('media');

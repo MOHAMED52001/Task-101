@@ -11,6 +11,7 @@ use App\Http\Controllers\API\V1\Posts\PostController;
 
 
 // Posts Routes
+Route::post('posts/{post}/addpostcarousel', [PostController::class, 'addPostCarousel']);
 Route::resource('posts', PostController::class);
 // End Posts Routes
 

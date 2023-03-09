@@ -14,10 +14,14 @@ return new class extends Migration
         Schema::create('post_carousels', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('post_id')->index();
-            $table->boolean('id_ad');
-            $table->text('content');
+            $table->boolean('is_ad');
             $table->string('see_more');
-            $table->string('media');
+            $table->string('img')->nullable();
+            $table->string('video')->nullable();
+            $table->string('pub_num')->nullable();
+            $table->string('slot_num')->nullable();
+            $table->text('ad_script')->nullable();
+            $table->text('content');
             $table->timestamps();
         });
     }
